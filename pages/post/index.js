@@ -7,18 +7,17 @@ function index() {
   return (
     <div className={styles.container}>
       <div className={styles.postwrapper}>
-        <Image
-          className={styles.coverimage}
-          height={300}
-          layout="responsive"
-          src={cover}
-          alt="article cover"
-        />
+        <div>
+          <Image
+            className={styles.coverimage}
+            height={300}
+            layout="responsive"
+            src={cover}
+            alt="article cover"
+          />
+        </div>
         <h1>How to render cool elements on react js</h1>
-        <p>
-          Use the Reporting API to monitor security violations, deprecated API
-          calls, and more.
-        </p>
+
         <div className={styles.postmeta}>
           <section className={styles.date}>
             <p>23 JUN 2021</p>
@@ -28,7 +27,7 @@ function index() {
               <li className={styles.tag}>javascript</li>
             </ul>
           </section>
-          <section className={styles.profile}>
+          {/* <section className={styles.profile}>
             <div className={styles.image}>
               <Image
                 className={styles.imageinner}
@@ -46,7 +45,7 @@ function index() {
                 <li>LinkedIn</li>
               </ul>
             </div>
-          </section>
+          </section> */}
         </div>
         <article>
           <p>

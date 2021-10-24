@@ -15,13 +15,15 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.grid}>
           <div className={styles.card}>
-            <Image
-              layout="responsive"
-              width={400}
-              height={250}
-              src={cover}
-              alt="article cover"
-            />
+            <div>
+              <Image
+                layout="responsive"
+                width={400}
+                height={250}
+                src={cover}
+                alt="article cover"
+              />
+            </div>
             <h2>Documentation and development of react</h2>
             <p>Find in-depth information about Next.js features and API.</p>
             <ul className={styles.taglist}>
@@ -30,13 +32,15 @@ export default function Home() {
           </div>
 
           <div className={styles.card}>
-            <Image
-              layout="responsive"
-              width={400}
-              height={250}
-              src={cover}
-              alt="article cover"
-            />
+            <div>
+              <Image
+                layout="responsive"
+                width={400}
+                height={250}
+                src={cover}
+                alt="article cover"
+              />
+            </div>
             <h2>Learn React from scratch</h2>
             <p>Learn about Next.js in an interactive course with quizzes!</p>
             <ul className={styles.taglist}>
@@ -47,13 +51,15 @@ export default function Home() {
           </div>
 
           <div className={styles.card}>
-            <Image
-              layout="responsive"
-              width={400}
-              height={250}
-              src={cover}
-              alt="article cover"
-            />
+            <div>
+              <Image
+                layout="responsive"
+                width={400}
+                height={250}
+                src={cover}
+                alt="article cover"
+              />
+            </div>
             <h2>Examples of better css code</h2>
             <p>Discover and deploy boilerplate example Next.js projects.</p>
             <ul className={styles.taglist}>
@@ -63,13 +69,15 @@ export default function Home() {
           </div>
 
           <div className={styles.card}>
-            <Image
-              width={400}
-              layout="responsive"
-              height={250}
-              src={cover}
-              alt="article cover"
-            />
+            <div>
+              <Image
+                width={400}
+                layout="responsive"
+                height={250}
+                src={cover}
+                alt="article cover"
+              />
+            </div>
             <h2>Deploy and manage your app in next</h2>
             <p>
               Instantly deploy your Next.js site to a public URL with Vercel.
