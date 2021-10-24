@@ -1,7 +1,7 @@
 import Image from "next/image";
+import cover from "../../assets/display.png";
 import profile from "../../assets/me.png";
 import styles from "../../styles/post.module.css";
-import cover from "../../assets/display.png";
 
 function index() {
   return (
