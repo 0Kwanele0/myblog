@@ -1,0 +1,85 @@
+.wrapper {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+  padding: 50px 20px;
+  border-top: 1px solid rgba(85, 85, 85, 0.185);
+}
+
+.logo {
+  color: rgba(11, 14, 24, 0.623);
+  font-family: "Roboto Mono", monospace;
+}
+.logo a {
+  font-size: 19px;
+  margin: 0;
+}
+.navigator {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.navigator a {
+  color: rgba(11, 14, 24, 0.623);
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+.menu {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu h3 {
+  margin: 0;
+}
+.logo {
+  flex: 2;
+}
+.logo p {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+
+.profile {
+  display: flex;
+  flex: 2;
+  align-items: center;
+  justify-content: flex-end;
+  font-family: monospace;
+}
+.image {
+  margin-right: 20px;
+}
+.imageinner {
+  border-radius: 50%;
+}
+.details p {
+  font-weight: 500;
+  font-size: 17px;
+  margin: 0;
+  color: rgba(53, 53, 53, 0.467);
+}
+.details ul {
+  color: rgb(43, 151, 223);
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+.details ul li {
+  margin: 0px 10px 10px 0;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 650px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .menu {
+    align-items: flex-start;
+    margin: 30px 0;
+  }
+}
