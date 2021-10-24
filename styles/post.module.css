@@ -1,0 +1,84 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0.5rem;
+}
+.postwrapper {
+  max-width: 700px;
+}
+.postmeta {
+  margin: 30px 0;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  font-family: monospace;
+  margin: 20px 0;
+}
+.image {
+  margin-right: 20px;
+}
+.imageinner {
+  border-radius: 50%;
+}
+.details p {
+  font-weight: 500;
+  font-size: 17px;
+  margin-bottom: 0;
+  color: rgba(53, 53, 53, 0.467);
+}
+.details ul {
+  color: rgb(43, 151, 223);
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+.details ul li {
+  margin: 0px 10px 10px 0;
+  font-size: 14px;
+}
+
+.date p {
+  color: rgba(53, 53, 53, 0.467);
+  margin: 0;
+  font-family: monospace;
+  font-size: 14px;
+}
+.taglist {
+  margin: 0;
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.tag {
+  margin: 8px 8px 8px 0;
+  color: rgba(102, 117, 119, 0.533);
+  padding: 4px 12px;
+  border: 0.5px solid#7776;
+  font-size: 0.8rem;
+}
+
+.recommend {
+  margin: 80px 0;
+}
+.recommend h5 {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.recommend ul {
+  padding: 0 20px;
+}
+.recommend li {
+  font-size: 19px;
+  color: rgb(50, 147, 226);
+  margin: 10px 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.coverimage {
+  object-fit: cover;
+}
