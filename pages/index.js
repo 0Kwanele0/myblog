@@ -1,6 +1,7 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
+import cover from "../assets/display.png";
 
 export default function Home() {
   return (
@@ -12,58 +13,75 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
+          <div className={styles.card}>
+            <Image
+              layout="responsive"
+              width={400}
+              height={250}
+              src={cover}
+              alt="article cover"
+            />
+            <h2>Documentation and development of react</h2>
             <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+            <ul className={styles.taglist}>
+              <li className={styles.tag}>javascript</li>
+            </ul>
+          </div>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
+          <div className={styles.card}>
+            <Image
+              layout="responsive"
+              width={400}
+              height={250}
+              src={cover}
+              alt="article cover"
+            />
+            <h2>Learn React from scratch</h2>
             <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+            <ul className={styles.taglist}>
+              <li className={styles.tag}>react js</li>
+              <li className={styles.tag}>css</li>
+              <li className={styles.tag}>javascript</li>
+            </ul>
+          </div>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
+          <div className={styles.card}>
+            <Image
+              layout="responsive"
+              width={400}
+              height={250}
+              src={cover}
+              alt="article cover"
+            />
+            <h2>Examples of better css code</h2>
             <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+            <ul className={styles.taglist}>
+              <li className={styles.tag}>next js</li>
+              <li className={styles.tag}>html</li>
+            </ul>
+          </div>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
+          <div className={styles.card}>
+            <Image
+              width={400}
+              layout="responsive"
+              height={250}
+              src={cover}
+              alt="article cover"
+            />
+            <h2>Deploy and manage your app in next</h2>
             <p>
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
-          </a>
+            <ul className={styles.taglist}>
+              <li className={styles.tag}>next js</li>
+              <li className={styles.tag}>html</li>
+              <li className={styles.tag}>python</li>
+            </ul>
+          </div>
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
-  )
+  );
 }
