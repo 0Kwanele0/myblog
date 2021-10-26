@@ -11,7 +11,7 @@ const configuredSanityClient = sanityClient({
   useCdn: true,
 });
 
-function index({ title, image, date, body, tags }) {
+const Index = ({ title, image, date, body, tags }) => {
   const imageProps = useNextSanityImage(configuredSanityClient, image);
 
   return (
@@ -61,9 +61,9 @@ function index({ title, image, date, body, tags }) {
       </div>
     </div>
   );
-}
+};
 
-export default index;
+export default Index;
 
 export const getServerSideProps = async (context) => {
   const pageSlug = context.query.slug;
