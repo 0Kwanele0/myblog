@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import styles from "../styles/nav.module.css";
+import Menu from "./Menu";
 import Link from "next/link";
 import Image from "next/image";
 import myicon from "../assets/mymenu.png";
@@ -37,22 +38,10 @@ function Navbar() {
         </Link>
       </div>
       <nav className={styles.navigatorBig}>
-        <a href="http://localhost:3000/post">React js</a>
-        <a href="#">Next js</a>
-        <a href="#">JavaScript</a>
-        <a href="#">Html/Css</a>
-        <a href="#">Back-end</a>
-        <a href="#">Ui and Ux</a>
-        <a href="#">Other</a>
+        <Menu />
       </nav>
       <nav ref={navmenu} className={styles.navigator}>
-        <a href="http://localhost:3000/post">React js</a>
-        <a href="#">Next js</a>
-        <a href="#">JavaScript</a>
-        <a href="#">Html/Css</a>
-        <a href="#">Back-end</a>
-        <a href="#">Ui and Ux</a>
-        <a href="#">Other</a>
+        <Menu />
       </nav>
       <div className={styles.iconCont}>
         {!menu ? (
