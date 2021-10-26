@@ -3,6 +3,7 @@ import { useRouter } from "next/dist/client/router";
 import { useState, useEffect } from "react";
 import styles from "../../styles/Home.module.css";
 import ImageUrlBuilder from "@sanity/image-url";
+import PostCard from "../../components/PostCard";
 
 export default function Home({ selected }) {
   const router = useRouter();
@@ -40,26 +41,7 @@ export default function Home({ selected }) {
         <div className={styles.grid}>
           {mappedPost.length ? (
             mappedPost.map((item, key) => {
-              return (
-                <div
-                  onClick={() => router.push(`/post/${item.slug.current}`)}
-                  key={key}
-                  className={styles.card}
-                >
-                  <img src={item.mainImage} alt="article cover" />
-                  <h2>{item.title}</h2>
-                  <p>{item.description}</p>
-                  <ul className={styles.taglist}>
-                    {item.tags.map((tag, key) => {
-                      return (
-                        <li className={styles.tag} key={key}>
-                          {tag}
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              );
+              return <PostCard key={key} item={item} />;
             })
           ) : (
             <p></p>

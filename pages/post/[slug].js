@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Head from "next/head";
 import BlockContent from "@sanity/block-content-to-react";
 import styles from "../../styles/post.module.css";
 import sanityClient from "@sanity/client";
@@ -11,11 +12,15 @@ const configuredSanityClient = sanityClient({
   useCdn: true,
 });
 
-const Index = ({ title, image, date, body, tags }) => {
+const Index = ({ title, image, date, body, tags, description }) => {
   const imageProps = useNextSanityImage(configuredSanityClient, image);
 
   return (
     <div className={styles.container}>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={`${description}`} />
+      </Head>
       <div className={styles.postwrapper}>
         <div>
           <Image
@@ -93,6 +98,7 @@ export const getServerSideProps = async (context) => {
         body: post.body,
         date: post._createdAt,
         tags: post.tags,
+        description: post.description,
       },
     };
   }
