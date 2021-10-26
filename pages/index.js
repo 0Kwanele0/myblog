@@ -1,9 +1,33 @@
 import Head from "next/head";
-import Image from "next/image";
+import { useRouter } from "next/dist/client/router";
+import { useState, useEffect } from "react";
 import styles from "../styles/Home.module.css";
-import cover from "../assets/display.png";
+import ImageUrlBuilder from "@sanity/image-url";
 
-export default function Home() {
+export default function Home({ post }) {
+  const router = useRouter();
+
+  const [mappedPost, setmappedPost] = useState([]);
+  useEffect(() => {
+    if (post.length) {
+      const imgBuilder = ImageUrlBuilder({
+        projectId: "7gx68era",
+        dataset: "production",
+        apiVersion: "2021-10-21",
+        useCdn: true,
+      });
+
+      setmappedPost(
+        post.map((p) => {
+          return {
+            ...p,
+            mainImage: imgBuilder.image(p.mainImage),
+          };
+        })
+      );
+    }
+  }, [post]);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -14,82 +38,53 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className={styles.grid}>
-          <div className={styles.card}>
-            <div>
-              <Image
-                layout="responsive"
-                width={400}
-                height={250}
-                src={cover}
-                alt="article cover"
-              />
-            </div>
-            <h2>Documentation and development of react</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-            <ul className={styles.taglist}>
-              <li className={styles.tag}>javascript</li>
-            </ul>
-          </div>
-
-          <div className={styles.card}>
-            <div>
-              <Image
-                layout="responsive"
-                width={400}
-                height={250}
-                src={cover}
-                alt="article cover"
-              />
-            </div>
-            <h2>Learn React from scratch</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-            <ul className={styles.taglist}>
-              <li className={styles.tag}>react js</li>
-              <li className={styles.tag}>css</li>
-              <li className={styles.tag}>javascript</li>
-            </ul>
-          </div>
-
-          <div className={styles.card}>
-            <div>
-              <Image
-                layout="responsive"
-                width={400}
-                height={250}
-                src={cover}
-                alt="article cover"
-              />
-            </div>
-            <h2>Examples of better css code</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-            <ul className={styles.taglist}>
-              <li className={styles.tag}>next js</li>
-              <li className={styles.tag}>html</li>
-            </ul>
-          </div>
-
-          <div className={styles.card}>
-            <div>
-              <Image
-                width={400}
-                layout="responsive"
-                height={250}
-                src={cover}
-                alt="article cover"
-              />
-            </div>
-            <h2>Deploy and manage your app in next</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-            <ul className={styles.taglist}>
-              <li className={styles.tag}>next js</li>
-              <li className={styles.tag}>html</li>
-              <li className={styles.tag}>python</li>
-            </ul>
-          </div>
+          {mappedPost.length ? (
+            mappedPost.map((item, key) => {
+              return (
+                <div
+                  onClick={() => router.push(`/post/${item.slug.current}`)}
+                  key={key}
+                  className={styles.card}
+                >
+                  <img src={item.mainImage} alt="article cover" />
+                  <h2>{item.title}</h2>
+                  <p>{item.description}</p>
+                  <ul className={styles.taglist}>
+                    {item.tags.map((tag, key) => {
+                      return (
+                        <li className={styles.tag} key={key}>
+                          {tag}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              );
+            })
+          ) : (
+            <p></p>
+          )}
         </div>
       </main>
     </div>
   );
 }
+
+export const getStaticProps = async () => {
+  const query = encodeURIComponent(`*[ _type == "post" ]`);
+  const url = `https://7gx68era.api.sanity.io/v1/data/query/production?query=${query}`;
+  const results = await fetch(url).then((res) => res.json());
+  const post = results.result;
+
+  if (!post) {
+    return {
+      notFound: true,
+    };
+  } else {
+    return {
+      props: {
+        post,
+      },
+    };
+  }
+};
