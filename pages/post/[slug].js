@@ -26,7 +26,7 @@ const Index = ({ title, image, date, body, tags, description }) => {
           <Image
             className={styles.coverimage}
             {...imageProps}
-            sizes="(max-width: 700px) 100vw, 800px"
+            sizes="(max-width: 500px) 100vw, 500px"
             layout="responsive"
             alt="article cover"
           />
