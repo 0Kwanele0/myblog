@@ -34,7 +34,9 @@ function Navbar() {
     <div className={styles.container}>
       <div className={styles.logo}>
         <Link href="/">
-          <a>My Dope Code</a>
+          <a>
+            My<span>Dope</span>Code
+          </a>
         </Link>
       </div>
       <nav className={styles.navigatorBig}>

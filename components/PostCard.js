@@ -11,7 +11,8 @@ function PostCard({ item }) {
     >
       <img src={item.mainImage} alt="article cover" />
       <h2>{item.title}</h2>
-      <p>{item.description}</p>
+      <p className={styles.date}>{item._createdAt}</p>
+      <p className={styles.description}>{item.description}</p>
       <ul className={styles.taglist}>
         {item.tags.map((tag, key) => {
           return (

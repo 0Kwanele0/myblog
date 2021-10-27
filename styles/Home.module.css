@@ -9,7 +9,6 @@
 }
 
 .main {
-  padding: 2rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -27,5 +26,5 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }

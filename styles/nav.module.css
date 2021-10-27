@@ -22,12 +22,15 @@
   margin: 20px;
 }
 .logo {
-  color: rgba(11, 14, 24, 0.623);
+  color: rgb(0, 0, 0);
   font-family: "Roboto Mono", monospace;
 }
 .logo a {
   font-size: 19px;
   margin: 0;
+}
+.logo span {
+  color: rgb(97, 49, 209);
 }
 .iconCont {
   display: none;
