@@ -55,7 +55,7 @@ export const getStaticProps = async () => {
   const query = encodeURIComponent(`*[ _type == "post" ]`);
   const url = `https://7gx68era.api.sanity.io/v1/data/query/production?query=${query}`;
   const results = await fetch(url).then((res) => res.json());
-  const post = results.result;
+  const post = await results.result;
 
   if (!post) {
     return {
