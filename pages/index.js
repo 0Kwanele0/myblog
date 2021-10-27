@@ -35,12 +35,6 @@ export default function Home({ post }) {
           name="description"
           content="Learn web development, from front end to back end. Includes articles about React.js, Next.js, Javascript and other web development technologies."
         />
-        <Link rel="preconnect" href="https://fonts.googleapis.com" />
-        <Link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <Link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
-          rel="stylesheet"
-        />
       </Head>
 
       <main className={styles.main}>
