@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import styles from "../styles/nav.module.css";
+import Router from "next/router";
 import Menu from "./Menu";
 import Link from "next/link";
 import Image from "next/image";
@@ -15,6 +16,12 @@ function Navbar() {
     setmenu(!menu);
   }
   useEffect(() => {
+    Router.events.on("routeChangeStart", () => {
+      if (menu) {
+        setmenu(false);
+      }
+      return;
+    });
     if (menu) {
       gsap.to(navmenu.current, 0.8, {
         translateX: "0",

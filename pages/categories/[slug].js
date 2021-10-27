@@ -38,15 +38,21 @@ export default function Home({ selected }) {
       </Head>
 
       <main className={styles.main}>
-        <div className={styles.grid}>
-          {mappedPost.length ? (
-            mappedPost.map((item, key) => {
-              return <PostCard key={key} item={item} />;
-            })
-          ) : (
-            <p></p>
-          )}
-        </div>
+        {mappedPost ? (
+          <div className={styles.grid}>
+            {mappedPost.length ? (
+              mappedPost.map((item, key) => {
+                return <PostCard key={key} item={item} />;
+              })
+            ) : (
+              <p></p>
+            )}
+          </div>
+        ) : (
+          <div>
+            <p>No posts found</p>
+          </div>
+        )}
       </main>
     </div>
   );
