@@ -10,7 +10,9 @@ function Footer() {
       <div className={styles.wrapper}>
         <div className={styles.logo}>
           <Link href="/">
-            <a>My Dope Code</a>
+            <a>
+              My<span>Dope</span>Code
+            </a>
           </Link>
           <p>
             A blog by a developer.
