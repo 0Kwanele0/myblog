@@ -64,23 +64,8 @@
 .content img {
   width: 100%;
 }
-
-.recommend {
-  margin: 80px 0;
-}
-.recommend h5 {
-  font-size: 22px;
-  font-weight: 500;
-}
-
-.recommend ul {
-  padding: 0 20px;
-}
-.recommend li {
-  font-size: 19px;
-  color: rgb(50, 147, 226);
-  margin: 10px 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+.content figure {
+  margin: auto 0;
 }
 
 .coverimage {

@@ -54,15 +54,6 @@ const Index = ({ title, image, date, body, tags, description }) => {
             projectId="7gx68era"
           />
         </article>
-        <div className={styles.recommend}>
-          <h5>Recommended post:</h5>
-          <ul>
-            <li>How to easily manipulate css code</li>
-            <li>Mehine learning for nerds</li>
-            <li>Did python really bacame the most popular language?</li>
-            <li>How is Angular better than react js</li>
-          </ul>
-        </div>
       </div>
     </div>
   );
