@@ -57,3 +57,10 @@
   font-weight: 700;
   /* font-family: "Courier New", Courier, monospace; */
 }
+
+@media screen and (max-width: 700px) {
+  .card {
+    padding: 0 15px;
+    margin: 1.4rem 0;
+  }
+}
