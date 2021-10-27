@@ -17,7 +17,7 @@
 .card:focus,
 .card:active {
   box-shadow: 0 0 22px 3px rgba(153, 153, 153, 0.192);
-  /* transform: translateY(-10px); */
+  transform: translateY(-10px);
 }
 
 .card h2 {
