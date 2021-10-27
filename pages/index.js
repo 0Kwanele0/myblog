@@ -34,6 +34,10 @@ export default function Home({ post }) {
           name="description"
           content="Learn web development, from front end to back end. Includes articles about React.js, Next.js, Javascript and other web development technologies."
         />
+        <meta
+          name="google-site-verification"
+          content="EKVY-rDNrqX8fuyn4tbbrxBN8ibIevmX7nxiNMcQcHc"
+        />
       </Head>
 
       <main className={styles.main}>
