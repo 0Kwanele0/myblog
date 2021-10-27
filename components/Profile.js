@@ -28,7 +28,11 @@ function Profile() {
             </a>
           </li>
           <li>
-            <a target="_blank" rel="noreferrer" href="">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://twitter.com/Kwanele_dev"
+            >
               Twitter
             </a>
           </li>
