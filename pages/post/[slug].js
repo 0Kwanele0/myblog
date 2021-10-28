@@ -37,13 +37,14 @@ const Index = ({ title, image, date, body, tags, description }) => {
           <section className={styles.date}>
             <p>{date}</p>
             <ul className={styles.taglist}>
-              {tags.map((tag, key) => {
-                return (
-                  <li key={key} className={styles.tag}>
-                    {tag}
-                  </li>
-                );
-              })}
+              {tags &&
+                tags.map((tag, key) => {
+                  return (
+                    <li key={key} className={styles.tag}>
+                      {tag}
+                    </li>
+                  );
+                })}
             </ul>
           </section>
         </div>
@@ -99,8 +100,7 @@ export const getStaticPaths = async () => {
   const query = encodeURIComponent(`*[ _type == "post" ]`);
   const url = `https://7gx68era.api.sanity.io/v1/data/query/production?query=${query}`;
   const results = await fetch(url).then((res) => res.json());
-  const post = await results.result;
-  console.log(post);
+  const post = results.result;
 
   const paths = post.map((item) => ({
     params: {
