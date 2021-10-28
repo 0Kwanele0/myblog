@@ -1,5 +1,4 @@
 import styles from "../styles/profile.module.css";
-import profile from "../public/assets/me.png";
 
 function Profile() {
   return (
@@ -7,7 +6,7 @@ function Profile() {
       <div className={styles.image}>
         <img
           className={styles.imageinner}
-          src={profile}
+          src="/me.png"
           alt="Kwanele Gamedze"
         />
       </div>
