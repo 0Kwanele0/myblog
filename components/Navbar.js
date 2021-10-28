@@ -4,8 +4,8 @@ import styles from "../styles/nav.module.css";
 import Router from "next/router";
 import Menu from "./Menu";
 import Link from "next/link";
-import myicon from "../assets/mymenu.png";
-import myiconClose from "../assets/closemenu.png";
+import myicon from "../public/assets/mymenu.png";
+import myiconClose from "../public/assets/closemenu.png";
 
 function Navbar() {
   const [menu, setmenu] = useState(false);
