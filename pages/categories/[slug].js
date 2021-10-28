@@ -85,15 +85,7 @@ export const getStaticProps = async (context) => {
 
 export const getStaticPaths = async () => {
   const post = {
-    data: [
-      { tag: "rectjs" },
-      { tag: "javascript" },
-      { tag: "htmlandcss" },
-      { tag: "nextjs" },
-      { tag: "uiandux" },
-      { tag: "other" },
-      { tag: "backend" },
-    ],
+    data: [{ tag: "javascript" }, { tag: "uiandux" }, { tag: "other" }],
   };
 
   const theTags = post.data;
