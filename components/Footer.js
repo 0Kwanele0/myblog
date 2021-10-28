@@ -1,5 +1,4 @@
 import styles from "../styles/footer.module.css";
-import Image from "next/image";
 import Link from "next/dist/client/link";
 import Menu from "./Menu";
 import Profile from "./Profile";
