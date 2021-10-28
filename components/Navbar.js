@@ -4,7 +4,6 @@ import styles from "../styles/nav.module.css";
 import Router from "next/router";
 import Menu from "./Menu";
 import Link from "next/link";
-import Image from "next/image";
 import myicon from "../assets/mymenu.png";
 import myiconClose from "../assets/closemenu.png";
 
@@ -54,20 +53,16 @@ function Navbar() {
       </nav>
       <div className={styles.iconCont}>
         {!menu ? (
-          <Image
+          <img
             onClick={iconClicked}
             className={styles.icon}
-            width={30}
-            height={30}
             src={myicon}
             alt="Categories"
           />
         ) : (
-          <Image
+          <img
             onClick={iconClicked}
             className={styles.icon}
-            width={30}
-            height={30}
             src={myiconClose}
             alt="Categories"
           />

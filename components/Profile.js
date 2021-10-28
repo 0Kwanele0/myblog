@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "../styles/profile.module.css";
 import profile from "../assets/me.png";
 
@@ -6,11 +5,8 @@ function Profile() {
   return (
     <section className={styles.profile}>
       <div className={styles.image}>
-        <Image
+        <img
           className={styles.imageinner}
-          height={60}
-          layout="fixed"
-          width={60}
           src={profile}
           alt="Kwanele Gamedze"
         />

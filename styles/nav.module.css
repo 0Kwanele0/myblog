@@ -34,6 +34,8 @@
 }
 .icon {
   object-fit: contain;
+  width: 30px;
+  height: 30px;
 }
 
 @media screen and (max-width: 995px) {
