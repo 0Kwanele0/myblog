@@ -1,3 +1,9 @@
 module.exports = {
-  reactStrictMode: true,
+  exportPathMap: async function () {
+    return {
+      "/": { page: "/" },
+      "/post": { page: "/post" },
+      "/categories": { page: "/categories" },
+    };
+  },
 };
