@@ -64,7 +64,7 @@ export const getStaticProps = async (context) => {
   const results = await fetch(url).then((res) => res.json());
   const post = results.result;
   const selected = post.filter((item) => {
-    if (item.tags.includes(context.query.slug)) {
+    if (item.tags.includes(context.params.slug)) {
       return item;
     }
     return;
@@ -84,26 +84,27 @@ export const getStaticProps = async (context) => {
 };
 
 export const getStaticPaths = async () => {
-  const map = [
-    "rectjs",
-    "javascript",
-    "htmlandcss",
-    "nextjs",
-    "uiandux",
-    "other",
-    "backend",
-  ];
+  const post = {
+    data: [
+      { tag: "rectjs" },
+      { tag: "javascript" },
+      { tag: "htmlandcss" },
+      { tag: "nextjs" },
+      { tag: "uiandux" },
+      { tag: "other" },
+      { tag: "backend" },
+    ],
+  };
 
-  const path = post.map((item) => {
+  const theTags = post.data;
+  const paths = theTags.map((item) => ({
     params: {
-      id: item;
-    }
-  });
+      slug: item.tag,
+    },
+  }));
 
   return {
-    props: {
-      paths,
-      fallback: true,
-    },
+    paths,
+    fallback: true,
   };
 };

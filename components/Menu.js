@@ -7,7 +7,7 @@ function Menu() {
         <a>React js</a>
       </Link>
       <Link href="/categories/next">
-        <a h>Next js</a>
+        <a>Next js</a>
       </Link>
       <Link href="/categories/javascript">
         <a>JavaScript</a>
