@@ -30,7 +30,7 @@ const Index = ({ post }) => {
               <img
                 className={styles.coverimage}
                 src={fixedImage}
-                alt="article cover"
+                alt={post.title}
               />
             </div>
             <h1>{post.title}</h1>
