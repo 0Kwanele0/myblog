@@ -61,7 +61,7 @@ const Index = ({ title, image, date, body, tags, description }) => {
 
 export default Index;
 
-export const getServerSideProps = async (context) => {
+export const getStaticProps = async (context) => {
   const pageSlug = context.query.slug;
 
   if (!pageSlug) {
@@ -93,4 +93,24 @@ export const getServerSideProps = async (context) => {
       },
     };
   }
+};
+
+export const getStaticPaths = async () => {
+  const query = encodeURIComponent(`*[ _type == "post" ]`);
+  const url = `https://7gx68era.api.sanity.io/v1/data/query/production?query=${query}`;
+  const results = await fetch(url).then((res) => res.json());
+  const post = await results.result;
+
+  const path = post.map((item) => {
+    params: {
+      id: item.slug;
+    }
+  });
+
+  return {
+    props: {
+      paths,
+      fallback: true,
+    },
+  };
 };

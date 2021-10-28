@@ -58,7 +58,7 @@ export default function Home({ selected }) {
   );
 }
 
-export const getServerSideProps = async (context) => {
+export const getStaticProps = async (context) => {
   const query = encodeURIComponent(`*[ _type == "post" ]`);
   const url = `https://7gx68era.api.sanity.io/v1/data/query/production?query=${query}`;
   const results = await fetch(url).then((res) => res.json());
@@ -81,4 +81,29 @@ export const getServerSideProps = async (context) => {
       },
     };
   }
+};
+
+export const getStaticPaths = async () => {
+  const map = [
+    "rectjs",
+    "javascript",
+    "htmlandcss",
+    "nextjs",
+    "uiandux",
+    "other",
+    "backend",
+  ];
+
+  const path = post.map((item) => {
+    params: {
+      id: item;
+    }
+  });
+
+  return {
+    props: {
+      paths,
+      fallback: true,
+    },
+  };
 };
