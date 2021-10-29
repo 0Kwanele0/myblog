@@ -3,11 +3,7 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" 
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml">
-    <url>
-        <loc>https://mydopecode.com/categories/[slug]/</loc>
-        <lastmod>2021-10-29</lastmod>
-		<xhtml:link rel="alternate" hreflang="en" href="https://mydopecode.com/categories/[slug]/" />
-    </url>
+    
     <url>
         <loc>https://mydopecode.com/</loc>
         <lastmod>2021-10-29</lastmod>
