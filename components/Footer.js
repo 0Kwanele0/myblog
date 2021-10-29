@@ -20,7 +20,7 @@ function Footer() {
           </p>
         </div>
         <div className={styles.menu}>
-          <h3>Categories</h3>
+          <h5>Categories</h5>
           <nav className={styles.navigator}>
             <Menu />
           </nav>
