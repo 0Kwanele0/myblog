@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
+    "generate-sitemap": "node sitemap-generator.js",
     "start": "next start",
     "lint": "next lint"
   },
@@ -12,11 +13,14 @@
     "@sanity/block-content-to-react": "^3.0.0",
     "@sanity/client": "^2.21.3",
     "@sanity/image-url": "^1.0.1",
+    "@sergeymyssak/nextjs-sitemap": "^2.0.3",
     "gsap": "^3.8.0",
     "next": "11.1.2",
     "next-compose-plugins": "^2.2.1",
     "next-optimized-images": "^2.6.2",
     "next-sanity-image": "^3.1.7",
+    "next-sitemap": "^1.6.192",
+    "node-fetch": "^3.0.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "sharp": "^0.29.2",
@@ -25,5 +29,6 @@
   "devDependencies": {
     "eslint": "^8.1.0",
     "eslint-config-next": "11.1.2"
-  }
+  },
+  "type": "module"
 }
