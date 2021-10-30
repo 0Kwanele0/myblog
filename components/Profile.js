@@ -26,18 +26,9 @@ function Profile() {
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://twitter.com/Kwanele_dev"
+              href="https://kwanelegamedze.com"
             >
-              Twitter
-            </a>
-          </li>
-          <li>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://www.linkedin.com/in/kwanelegamedze/"
-            >
-              LinkedIn
+              Portfolio
             </a>
           </li>
         </ul>
