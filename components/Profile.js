@@ -6,7 +6,7 @@ function Profile() {
       <div className={styles.image}>
         <img
           className={styles.imageinner}
-          src="/me.png"
+          src="/me.webp"
           alt="Kwanele Gamedze"
         />
       </div>

@@ -36,7 +36,9 @@
 }
 
 .menu h3 {
-  margin: 0;
+  margin-bottom: 3px;
+  color: rgba(8, 8, 10, 0.863);
+  font-size: 17px;
 }
 .logo {
   flex: 2;
