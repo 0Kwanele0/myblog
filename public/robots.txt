@@ -1,4 +1,3 @@
 User-agent: *
 Disallow: /wp-admin/
-Disallow: /?cat
 sitemap: https://mydopecode.com/sitemap.xml

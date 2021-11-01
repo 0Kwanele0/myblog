@@ -12,22 +12,22 @@
     <url>
         <loc>https://mydopecode.com/post/useful-tips-for-better-front-end-and-user-interface-design/</loc>
         <lastmod>2021-10-29</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
 		<xhtml:link rel="alternate" hreflang="en" href="https://mydopecode.com/post/useful-tips-for-better-front-end-and-user-interface-design/" />
     </url>
     <url>
         <loc>https://mydopecode.com/post/what-makes-a-good-software-developer/</loc>
         <lastmod>2021-10-29</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
 		<xhtml:link rel="alternate" hreflang="en" href="https://mydopecode.com/post/what-makes-a-good-software-developer/" />
     </url>
     <url>
         <loc>https://mydopecode.com/post/if-statements-in-javascript/</loc>
         <lastmod>2021-10-29</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
 		<xhtml:link rel="alternate" hreflang="en" href="https://mydopecode.com/post/if-statements-in-javascript/" />
     </url>
 </urlset>
